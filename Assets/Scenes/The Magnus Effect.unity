@@ -227,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 138917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7355974, z: -0, w: 0.677419}
-  m_LocalPosition: {x: -3.1896002, y: 0.88, z: 0.71000004}
+  m_LocalPosition: {x: -1.9996, y: 0.88, z: 13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 169501605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.28, y: 1, z: -10}
+  m_LocalPosition: {x: -2.28, y: 2.48, z: -7.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -940,7 +940,7 @@ Transform:
   m_GameObject: {fileID: 1287046738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7727566, z: -0, w: 0.6347025}
-  m_LocalPosition: {x: -2.0800002, y: 0.88, z: 0.71000004}
+  m_LocalPosition: {x: -0.89, y: 0.88, z: 13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1054,7 +1054,7 @@ Transform:
   m_GameObject: {fileID: 1360616011}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.8152956, z: -0, w: 0.5790451}
-  m_LocalPosition: {x: -0.92, y: 0.88, z: 0.71}
+  m_LocalPosition: {x: 0.27000034, y: 0.88, z: 13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1072,8 +1072,10 @@ GameObject:
   - component: {fileID: 1541467849}
   - component: {fileID: 1541467848}
   - component: {fileID: 1541467847}
+  - component: {fileID: 1541467852}
+  - component: {fileID: 1541467851}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1166,12 +1168,54 @@ Transform:
   m_GameObject: {fileID: 1541467846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.06, y: 0.57, z: -5.51}
+  m_LocalPosition: {x: -0.4499997, y: 0.72, z: 3.4799993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541467851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541467846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d298f07209fd8c241bbf6fe6541ac445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagnusSoccerKick
+  kickForce: 50
+  spinAmount: 2.6
+  magnusStrength: 2
+--- !u!54 &1541467852
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541467846}
+  serializedVersion: 5
+  m_Mass: 0.43
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1605527880
 GameObject:
   m_ObjectHideFlags: 0
